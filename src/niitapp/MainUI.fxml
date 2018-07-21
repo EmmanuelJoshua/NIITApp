@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="niitapp.MainUIController">
+   <children>
+      <ImageView fitHeight="693.0" fitWidth="1368.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/Home.jpg" />
+         </image>
+         <effect>
+            <BoxBlur height="2.0" width="1.0" />
+         </effect>
+      </ImageView>
+      <Text fill="#f5f4f6" layoutX="85.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIIT" textAlignment="CENTER">
+         <font>
+            <Font name="Egyptian Bold" size="80.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="settings" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="1009.0" layoutY="168.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Settings" textFill="#0081ff">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="employeeInfo" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="584.0" layoutY="232.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Employee Information" textAlignment="CENTER" textFill="#0081ff" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="studentEnquiries" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="164.0" layoutY="282.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="Student Enquiries" textAlignment="CENTER" textFill="#0081ff" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="studentInfo" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="164.0" layoutY="486.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: #0081FF; -fx-background-radius: 10;" text="Student Information" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="paymentStatus" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="584.0" layoutY="460.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: #0081FF; -fx-background-radius: 10;" text="Payment Status" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="about" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="1010.0" layoutY="398.0" prefHeight="177.0" prefWidth="183.0" style="-fx-background-color: #0081FF; -fx-background-radius: 10;" text="About" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font></JFXButton>
+      <Text fill="#f5f4f6" layoutX="84.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Training and placement system" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI" size="31.0" />
+         </font>
+      </Text>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="1051.0" layoutY="196.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/settings.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="1052.0" layoutY="428.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/about2.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="206.0" layoutY="286.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/enquiries.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="206.0" layoutY="498.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/students.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="626.0" layoutY="472.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/payment.png" />
+         </image>
+      </ImageView>
+      <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" layoutX="626.0" layoutY="240.0" mouseTransparent="true" preserveRatio="true">
+         <image>
+            <Image url="@images/employee.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="logout" buttonType="RAISED" layoutX="1101.0" layoutY="40.0" onAction="#logOut" prefHeight="34.0" prefWidth="183.0" style="-fx-background-color: #09E4A0; -fx-background-radius: 10;" text="Log Out" textFill="WHITE" />
+      <Text fill="#cd6397" layoutX="1200.0" layoutY="677.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed by J-Squad™">
+         <font>
+            <Font name="Segoe MDL2 Assets" size="14.0" />
+         </font>
+      </Text>
+      <StackPane fx:id="dialogPane" layoutX="557.0" layoutY="196.0" prefHeight="41.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
