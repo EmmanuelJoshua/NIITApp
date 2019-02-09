@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="647.0" prefWidth="1013.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementSystem.LoginUIController">
+   <children>
+      <ImageView fitHeight="647.0" fitWidth="1013.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@images/homeB.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#f5f4f6" layoutX="97.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIIT" textAlignment="CENTER">
+         <font>
+            <Font name="2Toon Expanded" size="96.0" />
+         </font>
+      </Text>
+      <Text fill="#f5f4f6" layoutX="97.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mangement System">
+         <font>
+            <Font name="Segoe UI" size="31.0" />
+         </font>
+      </Text>
+      <Pane blendMode="MULTIPLY" layoutX="200.0" layoutY="229.0" opacity="0.35" prefHeight="319.0" prefWidth="614.0" style="-fx-background-color: red; -fx-background-radius: 5;">
+         <effect>
+            <DropShadow color="#0081ff" height="8.0" radius="3.5" width="8.0" />
+         </effect>
+      </Pane>
+      <Text fill="#cd6397" layoutX="14.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courtesy of J-Squad™">
+         <font>
+            <Font name="Segoe MDL2 Assets" size="14.0" />
+         </font>
+      </Text>
+      <Pane fx:id="exitPane" layoutX="977.0" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: red;" visible="false" />
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="977.0" onMouseEntered="#hoverEnterEffect" onMouseExited="#hoverExitEffect" onMousePressed="#exitAction" pickOnBounds="true">
+         <image>
+            <Image url="@images/shutdown.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane layoutX="200.0" layoutY="274.0" prefHeight="56.0" prefWidth="5.0" style="-fx-background-color: #CD6397;" />
+      <JFXTextField fx:id="user_name" focusColor="#cdcbc6" labelFloat="true" layoutX="341.0" layoutY="391.0" prefHeight="39.0" prefWidth="334.0" promptText="Username" style="-fx-text-fill: #CDCBC6; -fx-prompt-text-fill: #CDCBC6;" unFocusColor="#835858">
+         <font>
+            <Font name="Segoe MDL2 Assets" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pass_word" focusColor="#cdcbc6" labelFloat="true" layoutX="340.0" layoutY="465.0" prefHeight="39.0" prefWidth="334.0" promptText="Password" style="-fx-prompt-text-fill: #CDCBC6; -fx-text-fill: #CDCBC6;" unFocusColor="#835858">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="loginBtn" buttonType="RAISED" layoutX="442.0" layoutY="554.0" onAction="#nextScene" prefHeight="39.0" prefWidth="114.0" ripplerFill="WHITE" style="-fx-border-color: white;" stylesheets="@css/loginButton.css" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="56.0" fitWidth="47.0" layoutX="288.0" layoutY="392.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="47.0" fitWidth="40.0" layoutX="291.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pass.png" />
+         </image>
+      </ImageView>
+      <Text fill="#cd6397" layoutX="227.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
+         <font>
+            <Font name="Book Antiqua" size="44.0" />
+         </font>
+      </Text>
+      <JFXProgressBar fx:id="progress" layoutX="407.0" layoutY="600.0" visible="false" />
+      <Separator layoutX="200.0" layoutY="361.0" prefHeight="3.0" prefWidth="614.0" />
+   </children>
+</AnchorPane>

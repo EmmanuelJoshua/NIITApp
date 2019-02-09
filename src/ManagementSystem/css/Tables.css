@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 20, 2018, 5:17:17 PM
+    Author     : Spark
+*/
+
+.table-view{
+    -fx-table-color:rgba(211, 211, 211, 0.8);
+    -fx-table-rippler-color:rgba(255, 0, 0, 0.9);
+}
+
+.table-view:focused .table-row-cell:selected .table-cell{
+    -fx-background-color: -fx-table-color;
+    -fx-table-cell-border-color: -fx-table-color;
+}
+
+.table-view:focused .table-row-cell:selected{
+    -fx-text-fill: white;
+}
+
+.table-view .jfx-rippler{
+    -fx-rippler-fill: -fx-table-rippler-color;
+}
+
+
+.table-view .column-header ,
+.table-view .column-header-background,
+.table-view .column-header-background .filler{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header{
+    -fx-border-width: 2 1 2 1;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .column-header .arrow,
+.table-view .column-header .sort-order-dot{
+    -fx-background-color:  #122224;
+}
+
+.table-view .column-header-background{
+    /*-fx-border-color: #F3F3F3*/
+}

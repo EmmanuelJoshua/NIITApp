@@ -1,0 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 22, 2018, 1:55:11 AM
+    Author     : Spark
+*/
+
+.jfx-button:hover{
+    -fx-background-color: rgba(184, 184, 183, 0.5);
+}
