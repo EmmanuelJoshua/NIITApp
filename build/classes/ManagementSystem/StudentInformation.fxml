@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="725.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementSystem.StudentInformationController">
+   <children>
+      <Pane fx:id="addStudentsPane" layoutX="181.0" layoutY="34.0" prefHeight="691.0" prefWidth="1187.0" style="-fx-background-color: #323B3D;">
+         <children>
+            <Pane layoutX="7.0" layoutY="27.0" prefHeight="354.0" prefWidth="592.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Pane layoutX="24.0" layoutY="-20.0" prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #122224; -fx-background-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" layoutX="7.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information" wrappingWidth="189.99998554587364">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow height="14.0" radius="6.5" width="14.0" />
+                     </effect>
+                  </Pane>
+                  <JFXTextField fx:id="name" focusColor="#122224" layoutX="14.0" layoutY="36.0" prefHeight="30.0" prefWidth="558.0" promptText="Name" />
+                  <JFXTextArea fx:id="address" focusColor="#122224" layoutX="14.0" layoutY="79.0" prefHeight="55.0" prefWidth="558.0" promptText="Address" />
+                  <JFXTextField fx:id="phone" focusColor="#122224" layoutX="14.0" layoutY="165.0" prefHeight="30.0" prefWidth="558.0" promptText="Phone / Mobile" />
+                  <JFXTextField fx:id="emailID" focusColor="#122224" layoutX="14.0" layoutY="312.0" prefHeight="30.0" prefWidth="558.0" promptText="Email ID" />
+                  <Label layoutX="14.0" layoutY="274.0" text="Gender">
+                     <font>
+                        <Font name="Segoe MDL2 Assets" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="D_O_B" defaultColor="#122224" layoutX="14.0" layoutY="215.0" prefHeight="30.0" prefWidth="558.0" promptText="Date Of Birth" />
+                  <JFXRadioButton fx:id="male" layoutX="87.0" layoutY="277.0" text="Male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="Segoe MDL2 Assets" size="18.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="female" layoutX="162.0" layoutY="277.0" text="Female" toggleGroup="$gender">
+                     <font>
+                        <Font name="Segoe MDL2 Assets" size="18.0" />
+                     </font></JFXRadioButton>
+               </children>
+            </Pane>
+            <Pane layoutX="7.0" layoutY="408.0" prefHeight="257.0" prefWidth="1168.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Separator layoutX="183.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="6.0" />
+                  <Pane layoutX="24.0" layoutY="-20.0" prefHeight="41.0" prefWidth="151.0" style="-fx-background-color: #122224; -fx-background-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" layoutX="7.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contract Terms" wrappingWidth="140.9999966621399">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <JFXButton buttonType="RAISED" layoutX="1049.0" layoutY="235.0" onAction="#submitDetails" prefHeight="44.0" prefWidth="100.0" style="-fx-background-color: #122224; -fx-background-radius: 10;" text="Submit" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Text layoutX="31.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee Particulars">
+                     <font>
+                        <Font name="Segoe UI Light" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="42.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuition Fee">
+                     <font>
+                        <Font name="Segoe MDL2 Assets" size="21.0" />
+                     </font></Text>
+                  <Text layoutX="202.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount Payable at the time of admission" textAlignment="CENTER" wrappingWidth="353.7333984375">
+                     <font>
+                        <Font name="Segoe UI Light" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="588.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Payable for the Program / Course" textAlignment="CENTER" wrappingWidth="201.82615995407104">
+                     <font>
+                        <Font name="Segoe UI Light" size="20.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutY="64.0" prefHeight="12.0" prefWidth="813.0" />
+                  <Separator layoutX="567.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="6.0" />
+                  <JFXTextField fx:id="feePayable" alignment="CENTER" editable="false" focusColor="#122224" layoutX="208.0" layoutY="76.0" prefHeight="30.0" prefWidth="341.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXTextField>
+                  <JFXTextField fx:id="feeTotal" alignment="CENTER" editable="false" focusColor="#122224" layoutX="600.0" layoutY="77.0" prefHeight="30.0" prefWidth="183.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></JFXTextField>
+                  <Separator layoutX="812.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="6.0" />
+                  <Text fill="RED" layoutX="828.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*N.B: Some values are Auto-Generated" wrappingWidth="133.7334020137787" />
+                  <Separator layoutY="128.0" prefHeight="12.0" prefWidth="813.0" />
+                  <JFXComboBox fx:id="admissionStatus" focusColor="#122224" layoutX="325.0" layoutY="146.0" prefHeight="30.0" prefWidth="291.0" promptText="Admission Status" visibleRowCount="5" />
+                  <JFXComboBox fx:id="paymentStatus" focusColor="#122224" layoutX="11.0" layoutY="202.0" prefHeight="30.0" prefWidth="291.0" promptText="Payment Status" visibleRowCount="5" />
+                  <JFXTextField fx:id="amountPaid" focusColor="#122224" layoutX="11.0" layoutY="146.0" prefHeight="30.0" prefWidth="291.0" promptText="Amount Paid" />
+               </children>
+            </Pane>
+            <Pane layoutX="616.0" layoutY="26.0" prefHeight="356.0" prefWidth="558.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Pane layoutX="24.0" layoutY="-20.0" prefHeight="41.0" prefWidth="190.0" style="-fx-background-color: #122224; -fx-background-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" layoutX="7.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Details" wrappingWidth="182.8261762857437">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <effect>
+                        <DropShadow height="14.0" radius="6.5" width="14.0" />
+                     </effect>
+                  </Pane>
+                  <JFXComboBox fx:id="program" focusColor="#122224" layoutX="14.0" layoutY="38.0" onAction="#handleProgram" prefHeight="30.0" prefWidth="242.0" promptText="Program / Course" visibleRowCount="9" />
+                  <JFXTextField fx:id="city" editable="false" focusColor="#122224" labelFloat="true" layoutX="9.0" layoutY="151.0" prefHeight="30.0" prefWidth="249.0" promptText="City" />
+                  <JFXTextField fx:id="centre" editable="false" focusColor="#122224" labelFloat="true" layoutX="9.0" layoutY="264.0" prefHeight="30.0" prefWidth="249.0" promptText="Centre" />
+                  <JFXTextField fx:id="semesterNo" editable="false" focusColor="#122224" layoutX="298.0" layoutY="37.0" prefHeight="30.0" prefWidth="242.0" promptText="Course Duration" />
+                  <Text fill="RED" layoutX="298.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*N.B: Some values are Auto-Generated" wrappingWidth="150.99998593330383" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="viewStudentsPane" layoutX="181.0" layoutY="34.0" prefHeight="691.0" prefWidth="1187.0" style="-fx-background-color: #323B3D;" visible="false">
+         <children>
+            <Pane layoutX="10.0" layoutY="41.0" prefHeight="117.0" prefWidth="258.0" style="-fx-background-color: #122224; -fx-background-radius: 4; -fx-border-radius: 10;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="-34.0" prefHeight="97.0" prefWidth="100.0" style="-fx-background-radius: 4; -fx-background-color: #262F2C;">
+                     <effect>
+                        <DropShadow color="#464444" height="4.5" radius="1.625" width="4.0" />
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="97.0" fitWidth="85.0" layoutX="8.0" layoutY="6.0" mouseTransparent="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/registered.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Separator layoutX="16.0" layoutY="72.0" prefHeight="12.0" prefWidth="221.0">
+                     <effect>
+                        <InnerShadow color="#62b465" />
+                     </effect>
+                  </Separator>
+                  <Text fill="#a1a0a1" fontSmoothingType="LCD" layoutX="156.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTERED" wrappingWidth="84.826171875">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="registeredLbl" fill="#d6cfcf" layoutX="194.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a1a0a1" layoutX="28.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Registered Students" textAlignment="CENTER" wrappingWidth="201.826171875">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="315.0" layoutY="41.0" prefHeight="117.0" prefWidth="258.0" style="-fx-background-color: #122224; -fx-background-radius: 4; -fx-border-radius: 10;">
+               <effect>
+                  <DropShadow color="#464444" height="4.5" radius="1.75" width="4.5" />
+               </effect>
+               <children>
+                  <Pane layoutX="14.0" layoutY="-34.0" prefHeight="97.0" prefWidth="100.0" style="-fx-background-radius: 4; -fx-background-color: #262F2C;">
+                     <children>
+                        <ImageView fitHeight="97.0" fitWidth="85.0" layoutX="6.0" layoutY="8.0" mouseTransparent="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/male.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Separator layoutX="19.0" layoutY="72.0" prefHeight="12.0" prefWidth="221.0">
+                     <effect>
+                        <InnerShadow color="#62b465" />
+                     </effect>
+                  </Separator>
+                  <Text fill="#a1a0a1" fontSmoothingType="LCD" layoutX="155.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MALES" textAlignment="RIGHT" wrappingWidth="84.826171875">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="maleLbl" fill="#d6cfcf" layoutX="197.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a1a0a1" layoutX="42.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Male Students" textAlignment="CENTER" wrappingWidth="175.826171875">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="619.0" layoutY="41.0" prefHeight="117.0" prefWidth="258.0" style="-fx-background-color: #122224; -fx-background-radius: 4; -fx-border-radius: 10;">
+               <effect>
+                  <DropShadow color="#464444" height="4.5" radius="1.75" width="4.5" />
+               </effect>
+               <children>
+                  <Pane layoutX="14.0" layoutY="-34.0" prefHeight="97.0" prefWidth="100.0" style="-fx-background-radius: 4; -fx-background-color: #262F2C;">
+                     <children>
+                        <ImageView fitHeight="97.0" fitWidth="85.0" layoutX="9.0" layoutY="4.0" mouseTransparent="true" preserveRatio="true" rotate="135.0">
+                           <image>
+                              <Image url="@images/female.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Separator layoutX="19.0" layoutY="71.0" prefHeight="12.0" prefWidth="221.0">
+                     <effect>
+                        <InnerShadow color="#62b465" />
+                     </effect>
+                  </Separator>
+                  <Text fill="#a1a0a1" fontSmoothingType="LCD" layoutX="159.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEMALES" textAlignment="RIGHT" wrappingWidth="84.826171875">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="femaleLbl" fill="#d6cfcf" layoutX="201.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a1a0a1" layoutX="38.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number Of Female Students" textAlignment="CENTER" wrappingWidth="182.826171875">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="919.0" layoutY="41.0" prefHeight="117.0" prefWidth="258.0" style="-fx-background-color: #122224; -fx-background-radius: 4; -fx-border-radius: 10;">
+               <effect>
+                  <DropShadow color="#464444" height="4.5" radius="1.75" width="4.5" />
+               </effect>
+               <children>
+                  <Pane layoutX="14.0" layoutY="-34.0" prefHeight="97.0" prefWidth="100.0" style="-fx-background-radius: 4; -fx-background-color: #262F2C;">
+                     <children>
+                        <ImageView fitHeight="97.0" fitWidth="85.0" layoutX="9.0" layoutY="4.0" mouseTransparent="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/target.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Separator layoutX="19.0" layoutY="71.0" prefHeight="12.0" prefWidth="221.0">
+                     <effect>
+                        <InnerShadow color="#62b465" />
+                     </effect>
+                  </Separator>
+                  <Text fill="#a1a0a1" fontSmoothingType="LCD" layoutX="154.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TARGET" textAlignment="RIGHT" wrappingWidth="84.826171875">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d6cfcf" layoutX="188.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a1a0a1" layoutX="32.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Targeted Number Of Students" textAlignment="CENTER" wrappingWidth="193.00001800060272">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TableView fx:id="studentInfo" layoutX="10.0" layoutY="167.0" prefHeight="424.0" prefWidth="1168.0" style="-fx-background-color: white; -fx-background-radius: 4;" stylesheets="@css/Tables.css">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="phoneCol" prefWidth="66.0" text="Phone" />
+                  <TableColumn fx:id="dobCol" minWidth="0.0" prefWidth="132.0" text="D.O.B" />
+                  <TableColumn fx:id="genderCol" prefWidth="90.0" text="Gender" />
+                  <TableColumn fx:id="emailCol" prefWidth="54.0" text="Email ID" />
+                  <TableColumn fx:id="programCol" prefWidth="53.0" text="Course" />
+                  <TableColumn fx:id="cityCol" prefWidth="155.0" text="City" />
+                  <TableColumn fx:id="centreCol" prefWidth="89.0" text="Centre" />
+                  <TableColumn fx:id="semesterCol" prefWidth="120.0" text="Duration" />
+                  <TableColumn fx:id="studentIDCol" prefWidth="96.0" text="Student ID" />
+                  <TableColumn fx:id="regIDCol" prefWidth="111.0" text="RegistrationID" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy></TableView>
+            <JFXButton layoutX="715.0" layoutY="622.0" onAction="#delete" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: white; -fx-background-radius: 4;" text="Delete">
+               <graphic>
+                  <MaterialDesignIconView fill="#122224" glyphName="DELETE" size="30" />
+               </graphic></JFXButton>
+            <JFXButton layoutX="873.0" layoutY="622.0" onAction="#refresh" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: white; -fx-background-radius: 4;" text="Refresh">
+               <graphic>
+                  <MaterialDesignIconView fill="#122224" glyphName="REFRESH" size="30" />
+               </graphic></JFXButton>
+            <JFXButton layoutX="1036.0" layoutY="622.0" onAction="#update" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: white; -fx-background-radius: 4;" text="Update">
+               <graphic>
+                  <MaterialDesignIconView fill="#122224" glyphName="UPLOAD" size="30" />
+               </graphic></JFXButton>
+            <JFXButton contentDisplay="RIGHT" layoutX="408.0" layoutY="624.0" onAction="#search" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: white;" text="Search">
+               <graphic>
+                  <FontAwesomeIconView fill="#122224" glyphName="SEARCH" size="25" />
+               </graphic></JFXButton>
+            <Pane layoutX="8.0" layoutY="624.0" prefHeight="37.0" prefWidth="183.0" style="-fx-background-radius: 4; -fx-background-color: white;">
+               <children>
+                  <JFXComboBox fx:id="search_Opt" focusColor="#122224" layoutX="7.0" layoutY="2.0" onAction="#handleSearch" prefHeight="30.0" prefWidth="170.0" promptText="Search By" />
+               </children>
+            </Pane>
+            <Pane layoutX="208.0" layoutY="624.0" prefHeight="37.0" prefWidth="183.0" style="-fx-background-radius: 4; -fx-background-color: white;">
+               <effect>
+                  <DropShadow color="#464444" height="15.36" radius="6.645" width="13.22" />
+               </effect>
+               <children>
+                  <JFXTextField fx:id="searchField" disable="true" focusColor="#122224" layoutX="8.0" layoutY="3.0" prefHeight="30.0" prefWidth="169.0" promptText="Search" />
+                  <JFXComboBox fx:id="searchField2" focusColor="#122224" layoutX="8.0" layoutY="3.0" prefHeight="30.0" prefWidth="169.0" promptText="Gender" visible="false" visibleRowCount="5" />
+                  <JFXComboBox fx:id="searchField3" focusColor="#122224" layoutX="8.0" layoutY="3.0" prefHeight="30.0" prefWidth="169.0" promptText="Course" visible="false" visibleRowCount="5" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="-2.0" layoutY="34.0" prefHeight="691.0" prefWidth="183.0" style="-fx-background-color: #122224;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="20.0" onAction="#addStud_StudInfo" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" stylesheets="@css/Buttons.css" text="Add Students" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="80.0" onAction="#viewStud_StudInfo" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" stylesheets="@css/Buttons.css" text="View Students" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" prefHeight="34.0" prefWidth="1369.0" style="-fx-background-color: #122224;">
+         <children>
+            <Text fill="WHITE" layoutX="7.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Information">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="28.0" />
+               </font>
+            </Text>
+            <Pane fx:id="exitPane" layoutX="1335.0" prefHeight="34.0" prefWidth="33.0" style="-fx-background-color: red;" visible="false" />
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="1335.0" onMouseEntered="#hoverEnterEffect" onMouseExited="#hoverExitEffect" onMousePressed="#exitAction" pickOnBounds="true">
+               <image>
+                  <Image url="@images/shutdown.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

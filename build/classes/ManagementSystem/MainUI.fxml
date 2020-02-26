@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" pickOnBounds="false" prefHeight="729.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementSystem.MainUIController">
+   <children>
+      <ImageView fx:id="slider" fitHeight="729.0" fitWidth="1368.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/home1.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#f5f4f6" layoutX="65.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIIT" textAlignment="CENTER">
+         <font>
+            <Font name="2Toon Expanded" size="96.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="settings" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1009.0" layoutY="193.0" onAction="#settingsEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons2.css" text="Settings" textFill="#122224">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="employeeInfo" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="1.0" layoutX="583.0" layoutY="262.0" onAction="#employeeEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons2.css" text="Employee Information" textAlignment="CENTER" textFill="#122224" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" top="-3.0" />
+         </padding>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/employee.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="studentEnquiries" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="1.0" layoutX="163.0" layoutY="296.0" onAction="#StudentEnquiriesEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons2.css" text="Student Enquiries" textAlignment="CENTER" textFill="#122224" wrapText="true">
+         <font>
+            <Font name="HelveticaNeue Regular" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="100.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/enquiries.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" top="-3.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="studentInfo" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="1.0" layoutX="163.0" layoutY="500.0" onAction="#StudentInformationEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons3.css" text="Student Information" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/students.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="5.0" top="-3.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="paymentStatus" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="5.0" layoutX="583.0" layoutY="465.0" onAction="#paymentEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons3.css" text="Payment Status" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/payment.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="25.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton fx:id="about" alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="1009.0" layoutY="400.0" onAction="#aboutEvent" prefHeight="177.0" prefWidth="183.0" style="-fx-background-radius: 10;" stylesheets="@css/buttons3.css" text="About" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="25.0" />
+         </font>
+         <graphic>
+            <ImageView accessibleRole="TEXT" fitHeight="100.0" fitWidth="103.0" mouseTransparent="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/about2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <Text fill="#f5f4f6" layoutX="65.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Management System" wrappingWidth="324.5830078125">
+         <font>
+            <Font name="Segoe UI" size="31.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="logout" buttonType="RAISED" layoutX="1101.0" layoutY="57.0" onAction="#logOut" prefHeight="34.0" prefWidth="183.0" style="-fx-background-color: #09E4A0; -fx-background-radius: 10;" text="Log out" textFill="WHITE" />
+      <Text fill="#f5e2eb" layoutX="1200.0" layoutY="692.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Designed by J-Squad™">
+         <font>
+            <Font name="Segoe MDL2 Assets" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="exit" fitHeight="37.0" fitWidth="41.0" layoutX="1331.0" layoutY="2.0" onMouseEntered="#hoverEnterMain" onMouseExited="#hoverExitMain" onMousePressed="#exitAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/close5.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="minimise" fitHeight="37.0" fitWidth="30.0" layoutX="1294.0" layoutY="7.0" onMousePressed="#minimiseEvent" pickOnBounds="true">
+         <image>
+            <Image url="@images/minimize.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="622.0" prefWidth="1215.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ManagementSystem.SettingsController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="33.0" prefHeight="589.0" prefWidth="183.0" style="-fx-background-color: #122224;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="22.0" prefHeight="30.0" prefWidth="157.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10;" text="Password" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="password_Settings" layoutX="181.0" layoutY="34.0" prefHeight="588.0" prefWidth="1039.0" style="-fx-background-color: #323B3D;">
+         <children>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="49.0" prefHeight="55.0" prefWidth="986.0" promptText="Enter Old Password" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="WHITE" labelFloat="true" layoutX="25.0" layoutY="202.0" prefHeight="55.0" prefWidth="986.0" promptText="Enter New Password" style="-fx-prompt-text-fill: white; -fx-text-fill: white;">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton buttonType="RAISED" layoutX="892.0" layoutY="295.0" onAction="#apply" prefHeight="55.0" prefWidth="119.0" style="-fx-background-color: #122224; -fx-background-radius: 10;" text="Apply" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="18.0" />
+               </font></JFXButton>
+         </children></Pane>
+      <Pane layoutX="-1.0" prefHeight="34.0" prefWidth="1221.0" style="-fx-background-color: #122224;">
+         <children>
+            <Text fill="WHITE" layoutX="39.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+               <font>
+                  <Font name="Segoe MDL2 Assets" size="24.0" />
+               </font>
+            </Text>
+            <Pane fx:id="exitPane" layoutX="1188.0" prefHeight="34.0" prefWidth="33.0" style="-fx-background-color: red;" visible="false" />
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="1188.0" onMouseEntered="#hoverEnterEffect" onMouseExited="#hoverExitEffect" onMousePressed="#exitAction" pickOnBounds="true">
+               <image>
+                  <Image url="@images/shutdown.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" layoutX="6.0" layoutY="29.0" size="30" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

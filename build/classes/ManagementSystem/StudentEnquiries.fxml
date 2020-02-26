@@ -128,7 +128,7 @@
             </Pane>
          </children>
       </Pane>
-      <Pane fx:id="viewEnquiriesPane" layoutX="181.0" layoutY="34.0" prefHeight="692.0" prefWidth="1187.0" style="-fx-background-color: #323B3D;">
+      <Pane fx:id="viewEnquiriesPane" layoutX="181.0" layoutY="34.0" prefHeight="692.0" prefWidth="1187.0" style="-fx-background-color: #323B3D;" visible="false">
          <children>
             <Pane layoutX="9.0" layoutY="41.0" prefHeight="117.0" prefWidth="346.0" style="-fx-background-color: #122224; -fx-background-radius: 4; -fx-border-radius: 10;">
                <children>
